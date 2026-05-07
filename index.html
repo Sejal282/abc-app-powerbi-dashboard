@@ -17,7 +17,7 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#240046,#001845,#003566);
+    background:linear-gradient(135deg,#050505,#12061a,#1b1028);
     color:white;
     line-height:1.6;
 }
@@ -35,28 +35,28 @@ header h1{
 
 header p{
     font-size:20px;
-    color:#f1f1f1;
+    color:#d9d9d9;
 }
 
 .container{
     width:90%;
-    max-width:1200px;
+    max-width:1250px;
     margin:auto;
 }
 
 .card{
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.10);
     backdrop-filter:blur(10px);
-    border-radius:18px;
-    padding:30px;
+    border-radius:20px;
+    padding:35px;
     margin-bottom:35px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.4);
+    box-shadow:0 8px 25px rgba(0,0,0,0.5);
 }
 
 h2{
     color:#e0aaff;
-    margin-bottom:20px;
+    margin-bottom:22px;
     font-size:32px;
 }
 
@@ -67,15 +67,15 @@ p{
 .kpi-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    gap:22px;
     margin-top:25px;
 }
 
 .kpi{
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,0.55);
     border:1px solid #c77dff;
     padding:25px;
-    border-radius:15px;
+    border-radius:16px;
     text-align:center;
 }
 
@@ -100,21 +100,40 @@ p{
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
     margin-top:30px;
 }
 
-.gallery img{
-    width:100%;
-    border-radius:14px;
-    transition:0.4s;
-    border:2px solid rgba(255,255,255,0.15);
+.dashboard-box{
+    background:rgba(255,255,255,0.04);
+    border-radius:16px;
+    padding:18px;
+    border:1px solid rgba(255,255,255,0.08);
 }
 
-.gallery img:hover{
-    transform:scale(1.03);
-    box-shadow:0 10px 25px rgba(224,170,255,0.5);
+.dashboard-box img{
+    width:100%;
+    border-radius:12px;
+    display:block;
+}
+
+.dashboard-title{
+    text-align:center;
+    margin-top:15px;
+    font-size:20px;
+    color:#e0aaff;
+    font-weight:bold;
+}
+
+ul{
+    margin-left:25px;
+    margin-top:15px;
+}
+
+li{
+    margin-bottom:12px;
+    font-size:18px;
 }
 
 .btn{
@@ -133,16 +152,6 @@ p{
     background:#c77dff;
 }
 
-ul{
-    margin-left:25px;
-    margin-top:15px;
-}
-
-li{
-    margin-bottom:10px;
-    font-size:18px;
-}
-
 footer{
     text-align:center;
     padding:30px;
@@ -158,7 +167,7 @@ footer{
 
 <header>
 
-<h1>ABC App Ecosystem Data Analysis & Business Intelligence Dashboard</h1>
+<h1>ABC App Ecosystem Dashboard</h1>
 
 <p>
 Power BI Data Analytics & Business Intelligence Project
@@ -248,20 +257,30 @@ and Wallet/Token systems.
 
 <div class="gallery">
 
-<img src="Screenshots/Main_Dasboard.png"
-alt="Main Dashboard">
+<div class="dashboard-box">
+<img src="Screenshots/Main_Dasboard.png">
+<div class="dashboard-title">Main Dashboard</div>
+</div>
 
-<img src="Screenshots/Revenue_Dashboard.png"
-alt="Revenue Dashboard">
+<div class="dashboard-box">
+<img src="Screenshots/Revenue_Dashboard.png">
+<div class="dashboard-title">Revenue Dashboard</div>
+</div>
 
-<img src="Screenshots/Token_Dashboard.png"
-alt="Token Dashboard">
+<div class="dashboard-box">
+<img src="Screenshots/Token_Dashboard.png">
+<div class="dashboard-title">Token Dashboard</div>
+</div>
 
-<img src="Screenshots/User_Dashboard.png"
-alt="User Dashboard">
+<div class="dashboard-box">
+<img src="Screenshots/User_Dashboard.png">
+<div class="dashboard-title">User Dashboard</div>
+</div>
 
-<img src="Screenshots/Dashboard.png"
-alt="Data Model Dashboard">
+<div class="dashboard-box">
+<img src="Screenshots/Dashboard.png">
+<div class="dashboard-title">Data Model Dashboard</div>
+</div>
 
 </div>
 
@@ -273,15 +292,15 @@ alt="Data Model Dashboard">
 
 <ul>
 
-<li>EV charging contributes highest revenue</li>
+<li>EV charging contributes the highest revenue among all business verticals</li>
 
-<li>Cafe services act as strong secondary revenue stream</li>
+<li>Cafe services generate strong secondary revenue streams</li>
 
-<li>Metro cities dominate user activity and transactions</li>
+<li>Metro cities dominate user engagement and transactions</li>
 
-<li>Token economy shows earning-spending imbalance</li>
+<li>Token system shows imbalance between earning and spending patterns</li>
 
-<li>Gaming engagement is high among younger users</li>
+<li>Gaming engagement is high among younger user groups</li>
 
 </ul>
 
@@ -292,8 +311,8 @@ alt="Data Model Dashboard">
 <h2>📂 Repository</h2>
 
 <p>
-View project datasets, dashboards,
-Power BI reports, and resources.
+View project datasets, Power BI dashboards,
+reports, and complete resources on GitHub.
 </p>
 
 <a class="btn"
