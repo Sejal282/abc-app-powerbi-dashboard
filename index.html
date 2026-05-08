@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,256 +18,386 @@
 
         body{
             font-family:Arial, sans-serif;
-            background:#f4f6f9;
-            color:#333;
-            text-align:center;
-        }
-
-        header{
-            background:#0078d4;
+            background:#050816;
             color:white;
-            padding:40px 20px;
-        }
-
-        header h1{
-            font-size:42px;
-            margin-bottom:10px;
-        }
-
-        header p{
-            font-size:18px;
-            max-width:900px;
-            margin:auto;
-            line-height:1.7;
         }
 
         .container{
             width:90%;
-            max-width:1100px;
+            max-width:1300px;
             margin:auto;
             padding:40px 0;
         }
 
+        .hero{
+            text-align:center;
+            padding:40px 20px;
+        }
+
+        .hero h1{
+            font-size:60px;
+            margin-bottom:20px;
+            color:white;
+        }
+
+        .line{
+            width:300px;
+            height:4px;
+            background:#a855f7;
+            margin:20px auto;
+            border-radius:10px;
+        }
+
+        .hero p{
+            font-size:24px;
+            color:#d1d5db;
+            line-height:1.8;
+            max-width:1000px;
+            margin:auto;
+        }
+
         .buttons{
-            margin-top:30px;
+            margin-top:40px;
         }
 
         .btn{
             display:inline-block;
-            background:#0078d4;
-            color:white;
-            padding:14px 24px;
+            padding:14px 28px;
             margin:10px;
+            border-radius:10px;
             text-decoration:none;
-            border-radius:8px;
-            font-size:16px;
+            color:white;
+            font-size:18px;
             font-weight:bold;
             transition:0.3s;
         }
 
         .btn:hover{
-            background:#005ea6;
             transform:scale(1.05);
         }
 
-        .card{
-            background:white;
+        .blue{
+            background:#2563eb;
+        }
+
+        .dark{
+            background:#1f2937;
+        }
+
+        .purple{
+            background:#7c3aed;
+        }
+
+        .section{
+            margin-top:40px;
+            background:#0b1120;
+            border:1px solid rgba(255,255,255,0.1);
+            border-radius:18px;
             padding:30px;
-            margin:25px 0;
-            border-radius:12px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.1);
-            text-align:left;
+            box-shadow:0 0 20px rgba(168,85,247,0.15);
         }
 
-        .card h2{
-            margin-bottom:15px;
-            color:#222;
+        .overview{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:30px;
+            flex-wrap:wrap;
         }
 
-        .card p{
-            line-height:1.8;
-            color:#555;
+        .overview-text{
+            flex:1;
+            min-width:300px;
         }
 
-        ul{
+        .overview-text h2{
+            color:#c084fc;
+            margin-bottom:20px;
+            font-size:32px;
+        }
+
+        .overview-text p{
+            color:#d1d5db;
+            line-height:2;
+            font-size:18px;
+        }
+
+        .dashboard-box{
+            flex:1;
+            min-width:300px;
+            background:#111827;
+            border-radius:16px;
+            padding:20px;
+            border:1px solid rgba(255,255,255,0.1);
+        }
+
+        .dashboard-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:10px;
+        }
+
+        .mini-card{
+            background:#1e293b;
+            border-radius:10px;
+            padding:15px;
+            height:90px;
+            border:1px solid rgba(168,85,247,0.3);
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            margin-top:35px;
+        }
+
+        .card{
+            background:#0b1120;
+            border-radius:18px;
+            padding:25px;
+            border:1px solid rgba(255,255,255,0.1);
+            box-shadow:0 0 15px rgba(59,130,246,0.15);
+        }
+
+        .card h3{
+            color:#c084fc;
+            margin-bottom:20px;
+            font-size:28px;
+        }
+
+        .card ul{
             padding-left:20px;
             line-height:2;
-            color:#555;
+            color:#d1d5db;
+            font-size:17px;
         }
 
-        .image-section{
+        .preview{
             margin-top:40px;
         }
 
-        .image-section img{
+        .preview h2{
+            text-align:center;
+            color:#c084fc;
+            margin-bottom:20px;
+            font-size:34px;
+        }
+
+        .preview-box{
+            background:#0b1120;
+            border-radius:18px;
+            padding:20px;
+            border:1px solid rgba(255,255,255,0.1);
+            box-shadow:0 0 20px rgba(168,85,247,0.15);
+        }
+
+        .preview-box img{
             width:100%;
-            max-width:900px;
-            border-radius:12px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.15);
+            border-radius:14px;
         }
 
         footer{
-            background:#222;
+            text-align:center;
+            margin-top:50px;
+            padding:30px;
+            color:#d1d5db;
+            font-size:18px;
+        }
+
+        .icons{
+            margin-top:20px;
+        }
+
+        .icons a{
             color:white;
-            padding:20px;
-            margin-top:40px;
+            text-decoration:none;
+            font-size:28px;
+            margin:0 12px;
         }
 
         @media(max-width:768px){
 
-            header h1{
-                font-size:30px;
+            .hero h1{
+                font-size:40px;
+            }
+
+            .hero p{
+                font-size:18px;
             }
 
             .btn{
                 display:block;
-                width:80%;
+                width:90%;
                 margin:15px auto;
             }
 
         }
 
     </style>
+
 </head>
 
 <body>
 
-    <!-- HEADER SECTION -->
-
-    <header>
-
-        <h1>ABC App Analytics Dashboard</h1>
-
-        <p>
-            Data Analytics & Business Intelligence Project created using Power BI.
-            This project analyzes user behavior, EV charging activity, gaming engagement,
-            wallet transactions, and revenue performance across the ABC App ecosystem.
-        </p>
-
-        <div class="buttons">
-
-            <!-- LIVE DASHBOARD BUTTON -->
-            <a href="https://YOUR-LIVE-DASHBOARD-LINK"
-               target="_blank"
-               class="btn">
-               Live Dashboard
-            </a>
-
-            <!-- GITHUB BUTTON -->
-            <a href="https://github.com/YOUR-USERNAME/YOUR-REPOSITORY"
-               target="_blank"
-               class="btn">
-               GitHub Repository
-            </a>
-
-            <!-- PPT BUTTON -->
-            <a href="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/Presentation/ABC_App_Presentation.pptx"
-               target="_blank"
-               class="btn">
-               Project PPT
-            </a>
-
-        </div>
-
-    </header>
-
-    <!-- MAIN CONTAINER -->
-
     <div class="container">
 
-        <!-- PROJECT OVERVIEW -->
+        <!-- HERO SECTION -->
 
-        <div class="card">
+        <div class="hero">
 
-            <h2>Project Overview</h2>
+            <h1>ABC App Analytics Dashboard</h1>
+
+            <div class="line"></div>
 
             <p>
-                The ABC App Analytics Dashboard helps businesses understand
-                customer activity and operational performance through interactive
-                visualizations and KPI tracking.
-                The dashboard combines multiple datasets including user data,
-                EV charging sessions, gaming activity, wallet transactions,
-                and revenue insights to support business decision-making.
+                A Data Analytics and Business Intelligence project built using Power BI.
+                This dashboard analyzes user behavior, EV charging activity, wallet transactions,
+                gaming usage, revenue trends, and customer engagement across the ABC App ecosystem.
             </p>
 
-        </div>
+            <div class="buttons">
 
-        <!-- KPIs -->
+                <a href=https://github.com/Sejal282/abc-app-powerbi-dashboard/blob/main/Dashboard.pbix
+                   target="_blank"
+                   class="btn blue">
+                   Live Dashboard
+                </a>
 
-        <div class="card">
+                <a href=https://github.com/Sejal282/abc-app-powerbi-dashboard
+                   target="_blank"
+                   class="btn dark">
+                   GitHub Repository
+                </a>
 
-            <h2>Key KPIs</h2>
+                <a href=https://github.com/Sejal282/abc-app-powerbi-dashboard/blob/main/ABC%20App%20Ecosystem%20Dashboard.pptx
+                   target="_blank"
+                   class="btn purple">
+                   Project PPT
+                </a>
 
-            <ul>
-                <li>Total Users</li>
-                <li>Total Revenue</li>
-                <li>Total EV Charging Sessions</li>
-                <li>Total Energy Consumed</li>
-                <li>Wallet Transactions</li>
-                <li>Gaming Usage Analytics</li>
-                <li>User Retention Rate</li>
-                <li>Referral Source Analysis</li>
-                <li>Peak Usage Hours</li>
-            </ul>
-
-        </div>
-
-        <!-- TOOLS -->
-
-        <div class="card">
-
-            <h2>Tools & Technologies Used</h2>
-
-            <ul>
-                <li>Power BI</li>
-                <li>Microsoft Excel</li>
-                <li>CSV Datasets</li>
-                <li>Data Cleaning</li>
-                <li>Data Modeling</li>
-                <li>DAX Measures</li>
-                <li>Dashboard Visualization</li>
-                <li>GitHub Pages</li>
-            </ul>
+            </div>
 
         </div>
 
-        <!-- BUSINESS INSIGHTS -->
+        <!-- OVERVIEW SECTION -->
 
-        <div class="card">
+        <div class="section overview">
 
-            <h2>Business Insights Generated</h2>
+            <div class="overview-text">
 
-            <ul>
-                <li>Identified top-performing game categories</li>
-                <li>Analyzed EV charging demand patterns</li>
-                <li>Tracked customer wallet spending trends</li>
-                <li>Measured user engagement and retention</li>
-                <li>Detected revenue growth opportunities</li>
-            </ul>
+                <h2>Project Overview</h2>
+
+                <p>
+                    This project focuses on analyzing the complete ABC App ecosystem.
+                    The dashboard provides insights into EV charging usage,
+                    wallet transactions, gaming engagement, user growth,
+                    and revenue generation using interactive visualizations and KPIs.
+                </p>
+
+            </div>
+
+            <div class="dashboard-box">
+
+                <div class="dashboard-grid">
+
+                    <div class="mini-card"></div>
+                    <div class="mini-card"></div>
+                    <div class="mini-card"></div>
+                    <div class="mini-card"></div>
+                    <div class="mini-card"></div>
+                    <div class="mini-card"></div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <!-- DASHBOARD IMAGE -->
+        <!-- CARDS -->
 
-        <div class="image-section">
+        <div class="cards">
 
-            <h2 style="margin-bottom:20px;">Dashboard Preview</h2>
+            <div class="card">
 
-            <img src="YOUR-IMAGE-LINK-HERE" alt="Dashboard Preview">
+                <h3>Key KPIs</h3>
+
+                <ul>
+                    <li>Total Users</li>
+                    <li>Total Revenue</li>
+                    <li>EV Charging Sessions</li>
+                    <li>Energy Consumed</li>
+                    <li>Wallet Transactions</li>
+                    <li>Gaming Usage</li>
+                    <li>User Retention</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Tools & Technologies</h3>
+
+                <ul>
+                    <li>Power BI</li>
+                    <li>Excel / CSV</li>
+                    <li>Data Cleaning</li>
+                    <li>Data Modeling</li>
+                    <li>DAX Measures</li>
+                    <li>Dashboard Design</li>
+                    <li>GitHub Pages</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Business Insights</h3>
+
+                <ul>
+                    <li>Identified top-performing games</li>
+                    <li>Analyzed charging patterns</li>
+                    <li>Tracked wallet spending trends</li>
+                    <li>Measured user engagement</li>
+                    <li>Detected revenue opportunities</li>
+                </ul>
+
+            </div>
 
         </div>
+
+        <!-- PREVIEW -->
+
+        <div class="preview">
+
+            <h2>Dashboard Preview</h2>
+
+            <div class="preview-box">
+
+                <img src=https://github.com/Sejal282/abc-app-powerbi-dashboard/blob/main/Screenshots/Main_Dasboard.png
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            Created by Khushi Kale | Data Analytics Project
+
+            <div class="icons">
+
+                <a href="#">🔗</a>
+                <a href="#">💻</a>
+                <a href="#">📧</a>
+
+            </div>
+
+        </footer>
 
     </div>
 
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            Created by Khushi Kale | Power BI Data Analytics Project
-        </p>
-
-    </footer>
-
 </body>
+
 </html>
