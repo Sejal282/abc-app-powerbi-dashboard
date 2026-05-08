@@ -1,371 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC App Analytics Dashboard</title>
 
-<title>ABC App Power BI Dashboard</title>
+    <style>
 
-<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        .container {
+            padding: 50px 20px;
+        }
 
-body{
-    font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#050505,#12061a,#1b1028);
-    color:white;
-    line-height:1.6;
-}
+        h1 {
+            color: #222;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
 
-header{
-    text-align:center;
-    padding:60px 20px;
-}
+        p {
+            color: #555;
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
 
-header h1{
-    font-size:48px;
-    color:#e0aaff;
-    margin-bottom:15px;
-}
+        .project-links {
+            margin-top: 40px;
+        }
 
-header p{
-    font-size:20px;
-    color:#d9d9d9;
-}
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            margin: 10px;
+            background-color: #0078d4;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.container{
-    width:90%;
-    max-width:1250px;
-    margin:auto;
-}
+        .btn:hover {
+            background-color: #005ea6;
+            transform: scale(1.05);
+        }
 
-.card{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.10);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    padding:35px;
-    margin-bottom:35px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.5);
-}
+        .section {
+            margin-top: 60px;
+            padding: 20px;
+        }
 
-h2{
-    color:#e0aaff;
-    margin-bottom:22px;
-    font-size:32px;
-}
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
 
-p{
-    font-size:18px;
-}
+        h2 {
+            color: #333;
+        }
 
-.kpi-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:22px;
-    margin-top:25px;
-}
+        ul {
+            line-height: 1.8;
+            color: #444;
+        }
 
-.kpi{
-    background:rgba(0,0,0,0.55);
-    border:1px solid #c77dff;
-    padding:25px;
-    border-radius:16px;
-    text-align:center;
-}
-
-.kpi h3{
-    font-size:38px;
-    color:#ffd6ff;
-}
-
-.kpi p{
-    margin-top:10px;
-}
-
-.tools span{
-    display:inline-block;
-    background:#7b2cbf;
-    color:white;
-    padding:12px 18px;
-    border-radius:8px;
-    margin:8px;
-    font-size:17px;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:30px;
-    margin-top:30px;
-}
-
-.dashboard-box{
-    background:rgba(255,255,255,0.04);
-    border-radius:16px;
-    padding:18px;
-    border:1px solid rgba(255,255,255,0.08);
-}
-
-.dashboard-box img{
-    width:100%;
-    border-radius:12px;
-    display:block;
-}
-
-.dashboard-title{
-    text-align:center;
-    margin-top:15px;
-    font-size:20px;
-    color:#e0aaff;
-    font-weight:bold;
-}
-
-ul{
-    margin-left:25px;
-    margin-top:15px;
-}
-
-li{
-    margin-bottom:12px;
-    font-size:18px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 24px;
-    background:#9d4edd;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-size:18px;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#c77dff;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    margin-top:40px;
-    background:rgba(0,0,0,0.4);
-}
-
-</style>
-
+    </style>
 </head>
 
 <body>
 
-<header>
+    <div class="container">
 
-<h1>ABC App Ecosystem Dashboard</h1>
+        <h1>ABC App Analytics Dashboard</h1>
 
-<p>
-Power BI Data Analytics & Business Intelligence Project
-</p>
+        <p>
+            Data Analytics & Business Intelligence project created using Power BI.
+            This dashboard analyzes user behavior, EV charging usage, gaming activity,
+            wallet transactions, and business KPIs across the ABC App ecosystem.
+        </p>
 
-</header>
+        <div class="project-links">
 
-<div class="container">
+            <!-- LIVE DASHBOARD -->
+            <a href="PASTE_YOUR_LIVE_DASHBOARD_LINK_HERE"
+               target="_blank"
+               class="btn">
+               Live Dashboard
+            </a>
 
-<div class="card">
+            <!-- GITHUB REPOSITORY -->
+            <a href="PASTE_YOUR_GITHUB_REPOSITORY_LINK_HERE"
+               target="_blank"
+               class="btn">
+               GitHub Repository
+            </a>
 
-<h2>📌 Project Overview</h2>
+            <!-- PPT PRESENTATION -->
+            <a href="PASTE_YOUR_PPT_LINK_HERE"
+               target="_blank"
+               class="btn">
+               Project PPT
+            </a>
 
-<p>
-This project analyzes user behavior, revenue performance,
-and token economy across the ABC App ecosystem including
-EV Charging, Cafe Transactions, Gaming Analytics,
-and Wallet/Token systems.
-</p>
+        </div>
 
-</div>
+    </div>
 
-<div class="card">
+    <!-- ABOUT PROJECT -->
+    <div class="section">
 
-<h2>🎯 Business Objectives</h2>
+        <div class="card">
 
-<ul>
-<li>Analyze revenue distribution across business verticals</li>
-<li>Understand user engagement patterns</li>
-<li>Track token economy performance</li>
-<li>Identify high-performing cities and services</li>
-<li>Generate actionable business insights</li>
-</ul>
+            <h2>Project Overview</h2>
 
-</div>
+            <p>
+                The project focuses on analyzing the complete ABC App ecosystem
+                including EV charging, wallet usage, gaming activity, and user engagement.
+                The dashboard provides actionable business insights using data visualization.
+            </p>
 
-<div class="card">
+        </div>
 
-<h2>📊 Key KPIs</h2>
+        <div class="card">
 
-<div class="kpi-container">
+            <h2>Key KPIs</h2>
 
-<div class="kpi">
-<h3>546K</h3>
-<p>Total Revenue</p>
-</div>
+            <ul>
+                <li>Total Users</li>
+                <li>Total Revenue</li>
+                <li>EV Charging Sessions</li>
+                <li>Total Energy Consumed</li>
+                <li>Wallet Transactions</li>
+                <li>Game Usage Analytics</li>
+                <li>User Retention & Activity</li>
+            </ul>
 
-<div class="kpi">
-<h3>347K</h3>
-<p>EV Revenue</p>
-</div>
+        </div>
 
-<div class="kpi">
-<h3>199K</h3>
-<p>Cafe Revenue</p>
-</div>
+        <div class="card">
 
-<div class="kpi">
-<h3>999</h3>
-<p>Total Users</p>
-</div>
+            <h2>Tools & Technologies</h2>
 
-</div>
+            <ul>
+                <li>Power BI</li>
+                <li>Excel / CSV</li>
+                <li>Data Cleaning</li>
+                <li>Data Modeling</li>
+                <li>DAX Measures</li>
+                <li>Dashboard Design</li>
+                <li>GitHub Pages</li>
+            </ul>
 
-</div>
+        </div>
 
-<div class="card">
-
-<h2>🛠 Tools & Technologies</h2>
-
-<div class="tools">
-
-<span>Power BI</span>
-<span>DAX</span>
-<span>Excel</span>
-<span>Data Modeling</span>
-<span>Visualization</span>
-<span>Business Intelligence</span>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>📸 Dashboard Preview</h2>
-
-<div class="gallery">
-
-<div class="dashboard-box">
-
-<img src="./Screenshots/Main_Dasboard.png"
-alt="Main Dashboard">
-
-<div class="dashboard-title">
-Main Dashboard
-</div>
-
-</div>
-
-<div class="dashboard-box">
-
-<img src="./Screenshots/Revenue_Dashboard.png"
-alt="Revenue Dashboard">
-
-<div class="dashboard-title">
-Revenue Dashboard
-</div>
-
-</div>
-
-<div class="dashboard-box">
-
-<img src="./Screenshots/Token_Dashboard.png"
-alt="Token Dashboard">
-
-<div class="dashboard-title">
-Token Dashboard
-</div>
-
-</div>
-
-<div class="dashboard-box">
-
-<img src="./Screenshots/User_Dashboard.png"
-alt="User Dashboard">
-
-<div class="dashboard-title">
-User Dashboard
-</div>
-
-</div>
-
-<div class="dashboard-box">
-
-<img src="./Screenshots/Dashboard.png"
-alt="Data Model Dashboard">
-
-<div class="dashboard-title">
-Data Model Dashboard
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>🔍 Key Insights</h2>
-
-<ul>
-
-<li>EV charging contributes the highest revenue among all business verticals</li>
-
-<li>Cafe services generate strong secondary revenue streams</li>
-
-<li>Metro cities dominate user engagement and transactions</li>
-
-<li>Token system shows imbalance between earning and spending patterns</li>
-
-<li>Gaming engagement is high among younger user groups</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>📂 Repository</h2>
-
-<p>
-View project datasets, Power BI dashboards,
-reports, and complete resources on GitHub.
-</p>
-
-<a class="btn"
-href="https://github.com/Sejal282/abc-app-powerbi-dashboard"
-target="_blank">
-
-View GitHub Repository
-
-</a>
-
-</div>
-
-</div>
-
-<footer>
-
-<h3>Developed by Sejal Kale</h3>
-
-<p>
-Power BI Dashboard Portfolio Project
-</p>
-
-</footer>
+    </div>
 
 </body>
 </html>
