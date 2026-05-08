@@ -2,151 +2,459 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ABC APP Power BI Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+    <title>Khushi Kale | Power BI Portfolio</title>
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f6f9;
-    color:#222;
-}
+    <style>
 
-header{
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-header h1{
-    margin:0;
-    font-size:40px;
-}
+        body{
+            font-family:Arial, sans-serif;
+            background:#0f172a;
+            color:white;
+            line-height:1.6;
+        }
 
-header p{
-    margin-top:10px;
-    font-size:18px;
-}
+        header{
+            padding:80px 20px;
+            text-align:center;
+            background:linear-gradient(135deg,#111827,#1e293b);
+        }
 
-.container{
-    width:90%;
-    margin:auto;
-    padding:40px 0;
-}
+        header h1{
+            font-size:60px;
+            margin-bottom:20px;
+        }
 
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-}
+        header p{
+            font-size:22px;
+            color:#cbd5e1;
+            max-width:900px;
+            margin:auto;
+        }
 
-.dashboard{
-    background:white;
-    margin-bottom:50px;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
+        .buttons{
+            margin-top:35px;
+        }
 
-.dashboard h2{
-    margin-bottom:20px;
-}
+        .btn{
+            display:inline-block;
+            margin:10px;
+            padding:14px 28px;
+            border-radius:10px;
+            text-decoration:none;
+            color:white;
+            font-weight:bold;
+            transition:0.3s;
+        }
 
-.dashboard img{
-    width:100%;
-    border-radius:10px;
-}
+        .btn:hover{
+            transform:scale(1.05);
+        }
 
-.links{
-    text-align:center;
-    margin-top:50px;
-}
+        .blue{
+            background:#2563eb;
+        }
 
-.links a{
-    display:inline-block;
-    margin:10px;
-    padding:12px 20px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-}
+        .purple{
+            background:#7c3aed;
+        }
 
-.links a:hover{
-    background:#1d4ed8;
-}
+        .dark{
+            background:#1e293b;
+        }
 
-footer{
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:50px;
-}
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            padding:50px 0;
+        }
 
-</style>
+        .section{
+            margin-bottom:50px;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:35px;
+        }
+
+        .section-title h2{
+            font-size:40px;
+            color:#c084fc;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:#111827;
+            padding:30px;
+            border-radius:18px;
+            box-shadow:0 0 15px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card h3{
+            margin-bottom:20px;
+            color:#60a5fa;
+            font-size:28px;
+        }
+
+        .card ul{
+            padding-left:20px;
+            color:#d1d5db;
+            line-height:2;
+        }
+
+        .overview{
+            background:#111827;
+            padding:40px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .overview p{
+            color:#d1d5db;
+            font-size:19px;
+            max-width:1000px;
+            margin:auto;
+            line-height:2;
+        }
+
+        .dashboard-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+            gap:25px;
+        }
+
+        .dashboard-card{
+            background:#111827;
+            border-radius:18px;
+            overflow:hidden;
+            box-shadow:0 0 15px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
+
+        .dashboard-card:hover{
+            transform:scale(1.02);
+        }
+
+        .dashboard-card img{
+            width:100%;
+            height:230px;
+            object-fit:cover;
+        }
+
+        .dashboard-card h3{
+            padding:20px;
+            color:#c084fc;
+        }
+
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:15px;
+        }
+
+        .skill{
+            background:#1e293b;
+            padding:14px 22px;
+            border-radius:30px;
+            font-weight:bold;
+            color:#e2e8f0;
+        }
+
+        footer{
+            text-align:center;
+            padding:30px;
+            background:#111827;
+            color:#94a3b8;
+            margin-top:50px;
+        }
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size:42px;
+            }
+
+            header p{
+                font-size:18px;
+            }
+
+            .btn{
+                display:block;
+                width:90%;
+                margin:15px auto;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-<header>
-    <h1>ABC APP Ecosystem Dashboard</h1>
-    <p>Power BI Data Analytics Project</p>
-</header>
+    <!-- HERO SECTION -->
 
-<div class="container">
+    <header>
 
-    <div class="section-title">
-        <h1>Dashboard Screenshots</h1>
+        <h1>Khushi Kale</h1>
+
+        <p>
+            Power BI Data Analytics & Business Intelligence Portfolio
+        </p>
+
+        <div class="buttons">
+
+            <a href="https://github.com/Sejal282/abc-app-powerbi-dashboard/blob/main/Dashboard.pbix"
+               target="_blank"
+               class="btn blue">
+               Dashboard File
+            </a>
+
+            <a href="https://github.com/Sejal282/abc-app-powerbi-dashboard"
+               target="_blank"
+               class="btn dark">
+               GitHub Repository
+            </a>
+
+            <a href="https://github.com/Sejal282/abc-app-powerbi-dashboard/blob/main/ABC%20App%20Ecosystem%20Dashboard.pptx"
+               target="_blank"
+               class="btn purple">
+               Project PPT
+            </a>
+
+        </div>
+
+    </header>
+
+    <div class="container">
+
+        <!-- ABOUT -->
+
+        <div class="section">
+
+            <div class="section-title">
+                <h2>About Project</h2>
+            </div>
+
+            <div class="overview">
+
+                <p>
+                    ABC App Analytics Dashboard is a Power BI project created to analyze
+                    user behavior, revenue performance, EV charging activity,
+                    gaming engagement, wallet transactions, and token economy.
+                    The project helps businesses generate insights and improve
+                    decision-making using interactive dashboards and KPIs.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- DASHBOARDS -->
+
+        <div class="section">
+
+            <div class="section-title">
+                <h2>Dashboard Screens</h2>
+            </div>
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card">
+
+                    <img src="https://raw.githubusercontent.com/Sejal282/abc-app-powerbi-dashboard/main/Screenshots/Main_Dasboard.png">
+
+                    <h3>Main Dashboard</h3>
+
+                </div>
+
+                <div class="dashboard-card">
+
+                    <img src="https://raw.githubusercontent.com/Sejal282/abc-app-powerbi-dashboard/main/Screenshots/Revenue_Dashboard.png">
+
+                    <h3>Revenue Dashboard</h3>
+
+                </div>
+
+                <div class="dashboard-card">
+
+                    <img src="https://raw.githubusercontent.com/Sejal282/abc-app-powerbi-dashboard/main/Screenshots/User_Dashboard.png">
+
+                    <h3>User Dashboard</h3>
+
+                </div>
+
+                <div class="dashboard-card">
+
+                    <img src="https://raw.githubusercontent.com/Sejal282/abc-app-powerbi-dashboard/main/Screenshots/Token_Dashboard.png">
+
+                    <h3>Token Dashboard</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- KPIs -->
+
+        <div class="section">
+
+            <div class="section-title">
+                <h2>Key KPIs</h2>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Users</h3>
+
+                    <ul>
+                        <li>Total Users</li>
+                        <li>User Retention</li>
+                        <li>Referral Sources</li>
+                        <li>User Engagement</li>
+                    </ul>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Revenue</h3>
+
+                    <ul>
+                        <li>Total Revenue</li>
+                        <li>Revenue Trends</li>
+                        <li>Top Revenue Verticals</li>
+                        <li>Profit Insights</li>
+                    </ul>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Products</h3>
+
+                    <ul>
+                        <li>EV Charging Usage</li>
+                        <li>Cafe Analytics</li>
+                        <li>Gaming Engagement</li>
+                        <li>Token Economy</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TOOLS -->
+
+        <div class="section">
+
+            <div class="section-title">
+                <h2>Tools & Technologies</h2>
+            </div>
+
+            <div class="skills">
+
+                <div class="skill">Power BI</div>
+                <div class="skill">DAX</div>
+                <div class="skill">Excel</div>
+                <div class="skill">CSV</div>
+                <div class="skill">Data Modeling</div>
+                <div class="skill">Visualization</div>
+                <div class="skill">Business Intelligence</div>
+                <div class="skill">GitHub Pages</div>
+
+            </div>
+
+        </div>
+
+        <!-- BUSINESS INSIGHTS -->
+
+        <div class="section">
+
+            <div class="section-title">
+                <h2>Business Insights</h2>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>Revenue Analysis</h3>
+
+                    <ul>
+                        <li>EV Charging generated maximum revenue</li>
+                        <li>Young active users were most valuable</li>
+                        <li>Revenue growth opportunities identified</li>
+                    </ul>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>User Behavior</h3>
+
+                    <ul>
+                        <li>Games showed high engagement</li>
+                        <li>Cafe and EV usage positively correlated</li>
+                        <li>Inactive users detected using analytics</li>
+                    </ul>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Future Improvements</h3>
+
+                    <ul>
+                        <li>Live heatmap integration</li>
+                        <li>Smart engagement detector</li>
+                        <li>Wellness booking integration</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="dashboard">
-        <h2>Main Dashboard</h2>
-        <img src="Screenshots/Dashboard.png" alt="Dashboard">
-    </div>
+    <!-- FOOTER -->
 
-    <div class="dashboard">
-        <h2>Main Analytics Dashboard</h2>
-        <img src="Screenshots/Main_Dasboard.png" alt="Main Dashboard">
-    </div>
+    <footer>
 
-    <div class="dashboard">
-        <h2>Revenue Dashboard</h2>
-        <img src="Screenshots/Revenue_Dashboard.png" alt="Revenue Dashboard">
-    </div>
+        Created by Khushi Kale | Power BI Analytics Portfolio
 
-    <div class="dashboard">
-        <h2>Token Dashboard</h2>
-        <img src="Screenshots/Token_Dashboard.png" alt="Token Dashboard">
-    </div>
-
-    <div class="dashboard">
-        <h2>User Dashboard</h2>
-        <img src="Screenshots/User_Dashboard.png" alt="User Dashboard">
-    </div>
-
-    <div class="links">
-
-        <a href="Dashboard.pbix">
-            Download PBIX File
-        </a>
-
-        <a href="ABC%20App%20Ecosystem%20Dashboard.pptx">
-            Download Presentation
-        </a>
-
-    </div>
-
-</div>
-
-<footer>
-    <p>Created by Sejal Kale</p>
-</footer>
+    </footer>
 
 </body>
+
 </html>
