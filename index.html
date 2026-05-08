@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,105 +8,138 @@
 
     <style>
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            text-align: center;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
 
-        .container {
-            padding: 60px 20px;
+        body{
+            font-family:Arial, sans-serif;
+            background:#f4f6f9;
+            color:#333;
+            text-align:center;
         }
 
-        h1 {
-            font-size: 42px;
-            color: #222;
-            margin-bottom: 15px;
+        header{
+            background:#0078d4;
+            color:white;
+            padding:40px 20px;
         }
 
-        .subtitle {
-            font-size: 18px;
-            color: #555;
-            max-width: 850px;
-            margin: auto;
-            line-height: 1.7;
+        header h1{
+            font-size:42px;
+            margin-bottom:10px;
         }
 
-        .buttons {
-            margin-top: 40px;
+        header p{
+            font-size:18px;
+            max-width:900px;
+            margin:auto;
+            line-height:1.7;
         }
 
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 14px 24px;
-            background-color: #0078d4;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s;
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:auto;
+            padding:40px 0;
         }
 
-        .btn:hover {
-            background-color: #005ea6;
-            transform: scale(1.05);
+        .buttons{
+            margin-top:30px;
         }
 
-        .section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
+        .btn{
+            display:inline-block;
+            background:#0078d4;
+            color:white;
+            padding:14px 24px;
+            margin:10px;
+            text-decoration:none;
+            border-radius:8px;
+            font-size:16px;
+            font-weight:bold;
+            transition:0.3s;
         }
 
-        .card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-            text-align: left;
+        .btn:hover{
+            background:#005ea6;
+            transform:scale(1.05);
         }
 
-        h2 {
-            color: #333;
-            margin-bottom: 15px;
+        .card{
+            background:white;
+            padding:30px;
+            margin:25px 0;
+            border-radius:12px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+            text-align:left;
         }
 
-        p {
-            color: #555;
-            line-height: 1.7;
+        .card h2{
+            margin-bottom:15px;
+            color:#222;
         }
 
-        ul {
-            color: #555;
-            line-height: 1.8;
+        .card p{
+            line-height:1.8;
+            color:#555;
         }
 
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #222;
-            color: white;
+        ul{
+            padding-left:20px;
+            line-height:2;
+            color:#555;
+        }
+
+        .image-section{
+            margin-top:40px;
+        }
+
+        .image-section img{
+            width:100%;
+            max-width:900px;
+            border-radius:12px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        footer{
+            background:#222;
+            color:white;
+            padding:20px;
+            margin-top:40px;
+        }
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size:30px;
+            }
+
+            .btn{
+                display:block;
+                width:80%;
+                margin:15px auto;
+            }
+
         }
 
     </style>
-
 </head>
 
 <body>
 
-    <div class="container">
+    <!-- HEADER SECTION -->
+
+    <header>
 
         <h1>ABC App Analytics Dashboard</h1>
 
-        <p class="subtitle">
-            A Data Analytics and Business Intelligence project built using Power BI.
-            This dashboard analyzes user behavior, EV charging activity, wallet transactions,
-            gaming usage, revenue trends, and customer engagement across the ABC App ecosystem.
+        <p>
+            Data Analytics & Business Intelligence Project created using Power BI.
+            This project analyzes user behavior, EV charging activity, gaming engagement,
+            wallet transactions, and revenue performance across the ABC App ecosystem.
         </p>
 
         <div class="buttons">
@@ -119,7 +151,7 @@
                Live Dashboard
             </a>
 
-            <!-- GITHUB REPOSITORY BUTTON -->
+            <!-- GITHUB BUTTON -->
             <a href="https://github.com/YOUR-USERNAME/YOUR-REPOSITORY"
                target="_blank"
                class="btn">
@@ -135,22 +167,30 @@
 
         </div>
 
-    </div>
+    </header>
 
-    <div class="section">
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+
+        <!-- PROJECT OVERVIEW -->
 
         <div class="card">
 
             <h2>Project Overview</h2>
 
             <p>
-                This project focuses on analyzing the complete ABC App ecosystem.
-                The dashboard provides insights into EV charging usage, wallet transactions,
-                gaming engagement, user growth, and revenue generation using interactive
-                visualizations and KPIs in Power BI.
+                The ABC App Analytics Dashboard helps businesses understand
+                customer activity and operational performance through interactive
+                visualizations and KPI tracking.
+                The dashboard combines multiple datasets including user data,
+                EV charging sessions, gaming activity, wallet transactions,
+                and revenue insights to support business decision-making.
             </p>
 
         </div>
+
+        <!-- KPIs -->
 
         <div class="card">
 
@@ -159,23 +199,27 @@
             <ul>
                 <li>Total Users</li>
                 <li>Total Revenue</li>
-                <li>Charging Sessions</li>
-                <li>Energy Consumed</li>
+                <li>Total EV Charging Sessions</li>
+                <li>Total Energy Consumed</li>
                 <li>Wallet Transactions</li>
-                <li>Gaming Activity</li>
-                <li>User Retention</li>
+                <li>Gaming Usage Analytics</li>
+                <li>User Retention Rate</li>
                 <li>Referral Source Analysis</li>
+                <li>Peak Usage Hours</li>
             </ul>
 
         </div>
 
+        <!-- TOOLS -->
+
         <div class="card">
 
-            <h2>Tools & Technologies</h2>
+            <h2>Tools & Technologies Used</h2>
 
             <ul>
                 <li>Power BI</li>
-                <li>Excel / CSV</li>
+                <li>Microsoft Excel</li>
+                <li>CSV Datasets</li>
                 <li>Data Cleaning</li>
                 <li>Data Modeling</li>
                 <li>DAX Measures</li>
@@ -185,12 +229,43 @@
 
         </div>
 
+        <!-- BUSINESS INSIGHTS -->
+
+        <div class="card">
+
+            <h2>Business Insights Generated</h2>
+
+            <ul>
+                <li>Identified top-performing game categories</li>
+                <li>Analyzed EV charging demand patterns</li>
+                <li>Tracked customer wallet spending trends</li>
+                <li>Measured user engagement and retention</li>
+                <li>Detected revenue growth opportunities</li>
+            </ul>
+
+        </div>
+
+        <!-- DASHBOARD IMAGE -->
+
+        <div class="image-section">
+
+            <h2 style="margin-bottom:20px;">Dashboard Preview</h2>
+
+            <img src="YOUR-IMAGE-LINK-HERE" alt="Dashboard Preview">
+
+        </div>
+
     </div>
 
+    <!-- FOOTER -->
+
     <footer>
-        Created by Khushi Kale | Data Analytics Project
+
+        <p>
+            Created by Khushi Kale | Power BI Data Analytics Project
+        </p>
+
     </footer>
 
 </body>
-
 </html>
