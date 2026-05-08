@@ -9,14 +9,14 @@ This project analyzes user behavior, revenue performance, and token economy acro
 
 The goal is to understand business performance, user engagement patterns, and identify growth opportunities.
 
-🎯 Objectives
+Objectives
 Analyze revenue distribution across different business verticals
 Understand user behavior and segmentation
 Study token earning vs spending patterns
 Identify high-performing products, cities, and services
 Provide actionable business recommendations
 
-📁 Dataset Overview
+Dataset Overview
 The project uses multiple interconnected datasets:
 Users Table → User demographics and signup details
 EV Charging Data → Energy consumption and revenue
@@ -31,7 +31,7 @@ Data Cleaning & Transformation
 Data Visualization
 DAX (Data Analysis Expressions)
 
-📊 Dashboard Features
+Dashboard Features
 The Power BI dashboard includes:
 📌 Revenue Analysis (EV vs Cafe vs Games)
 👥 User Segmentation (City, Age, Gender)
@@ -40,17 +40,17 @@ The Power BI dashboard includes:
 📈 Trend Analysis (Time-based insights)
 🏆 Product Performance Insights
 
-🔍 Key Insights
+Key Insights
 EV charging contributes the highest revenue among all verticals
 Cafe acts as a strong secondary revenue stream
 Token system shows imbalance between earning and spending
 Metro cities dominate user engagement and transactions
 Certain games drive higher engagement but low revenue impact
 
-📸 Dashboard Preview
+Dashboard Preview
 Screenshots of the Power BI dashboard are available in the screenshots/ folder.
 
-📂 Repository Structure
+Repository Structure
 ABC-POWERBI-PROJECT
 │
 ├── Dashboard.pbix
